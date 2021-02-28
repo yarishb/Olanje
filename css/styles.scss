@@ -83,7 +83,6 @@ $dark-blue: #252B42;
   }
 
   .header-buttons {
-    cursor: pointer;
     margin-top: 2rem;
     width: 100%;
     display: flex;
@@ -92,6 +91,7 @@ $dark-blue: #252B42;
     position: absolute;
 
     &__button {
+      cursor: pointer;
       transition: .4s;
       margin-left: 1rem;
       font-size: 24px;
