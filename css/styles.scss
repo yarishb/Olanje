@@ -1,0 +1,372 @@
+@import 'fonts.css';
+
+$orange: #FA4A0C;
+$dark-grey: #222222;
+$white: #fff;
+$grey: #E4E4E4;
+$dark-blue: #252B42;
+* {
+  font-family: Montserrat, sans-serif;
+}
+
+.background {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-bar {
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    top: 40%;
+    transform: translateY(30%);
+  }
+
+  &__logo {
+    width: 10rem;
+    height: 5rem;
+    margin-left: 2rem;
+  }
+
+  &__links {
+    position: absolute;
+    right: -4rem;
+    display: flex;
+    flex-direction: row;
+    top: 30%;
+
+    &__link {
+      cursor: pointer;
+      transition: .4s;
+      font-size: 20px;
+      color: $dark-grey;
+      margin-right: 7rem;
+      font-weight: 300;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+
+.header {
+  background-image: url('../img/header-bg.jpg');
+  text-align: center;
+
+  &__content {
+    z-index: 1;
+    color: $white;
+    padding-top: 3rem;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &__moto {
+    margin-top: 1rem;
+    font-size: 58px;
+    font-weight: 800;
+  }
+
+  &__bottom {
+    margin-top: 1rem;
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  .header-buttons {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+
+    &__button {
+      transition: .4s;
+      margin-left: 1rem;
+      font-size: 24px;
+      font-weight: 500;
+      border: 1px solid rgba($white, 0.7);
+      padding: 0.7rem 2rem 0.7rem 2rem;
+      border-radius: 30px;
+
+      &:hover {
+        background-color: $orange;
+        border: 1px solid $orange;
+      }
+    }
+  }
+
+  &__phones {
+    margin-left: -7rem;
+    margin-top: 1rem;
+  }
+
+  .img-second {
+    z-index: 1;
+  }
+  .img-first {
+    z-index: 2;
+    margin-right: -14.5rem;
+    margin-top: -5rem;
+  }
+}
+
+.separator-center {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .separator {
+    height: 2px;
+    background-color: $grey;
+    width: 70%;
+  }
+}
+
+
+
+.tutorial {
+  position: relative;
+  margin-top: 5rem;
+  overflow: hidden;
+  &__header-block {
+    width: 100%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 800;
+    z-index: 10;
+    text-align: center;
+  }
+}
+
+.tutorial__block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  &__text {
+    margin-top: 20rem;
+    margin-left: -5rem;
+
+    &__header {
+      color: $orange;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    &__desc {
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    &__bottom {
+      margin-top: .5rem;
+      font-weight: 100;
+    }
+  }
+}
+
+.right {
+  margin-right: -10rem;
+}
+
+.download {
+  position: relative;
+  text-align: center;
+  background-image: url('../img/footer-bg.jpg');
+  background-size: cover;
+  height: 30rem;
+  color: $white;
+  margin-top: -3rem;
+
+  &__content {
+    padding-top: 5rem;
+  }
+
+  &__buttons {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    &__button {
+      transition: .4s;
+      margin-left: 1rem;
+      border-radius: 10px;
+      padding: 1rem 2.5rem 0.7rem 2.5rem;
+      border: 1px solid rgba($white, 0.7);
+
+      &:hover {
+        border: 1px solid $orange;
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+
+.footer {
+  height: 10rem;
+
+  &__logo {
+    margin-left: 5rem;
+  }
+
+  &__content {
+    top: 50%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__medias {
+    transform: translateY(50%);
+
+    &__icon {
+      font-size: 30px;
+      color: $orange;
+      margin-left: 1rem;
+    }
+  }
+
+  &__right {
+    margin-right: 5rem;
+    transform: translateY(50%);
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  .nav-bar {
+    &__links {
+      display: none;
+    }
+  }
+
+  .header {
+    background-image: none;
+    &__content {
+      color:$dark-grey;
+    }
+
+    &__moto {
+      font-size: 36px;
+    }
+
+    .header-buttons {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+
+      &__button {
+        margin-left: 20%;
+        margin-top: 1rem;
+        width: 10rem;
+        border: 1px solid $orange;
+        color: $orange;
+        border-radius: 30px;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+    }
+
+    &__phones {
+      margin-top: 15rem;
+      overflow: hidden;
+    }
+
+    &__img {
+      position: absolute;
+    }
+
+    .img-first {
+      position: absolute;
+      width: 25rem;
+      margin-left: -10rem;
+    }
+
+    .img-second {
+      margin: 0;
+      width: 12rem;
+    }
+  }
+
+  .separator-center {
+    display: none;
+  }
+
+
+  .tutorial {
+    margin-top: 30rem;
+    margin-left: -.5rem;
+    &__header {
+      padding-bottom: 2rem;
+      border-bottom: 3px solid $grey;
+    }
+
+    .first_block {
+      margin-top: 30rem;
+    }
+
+    &__block {
+      margin-top: 15rem;
+      flex-direction: column;
+      text-align: center;
+      max-width: 22rem;
+      &__text {
+        margin-left: 2rem;
+      }
+    }
+
+    &__img {
+      width: 30rem;
+    }
+  }
+
+  .right {
+    margin-top: -20rem;
+  }
+
+  .top-text {
+    position: absolute;
+    margin-top: -60rem;
+  }
+
+
+  .download {
+    background-image: none;
+    background-color: $dark-blue;
+  }
+
+  .footer {
+    &__logo {
+      display: none;
+    }
+
+    &__medias {
+      margin-top: 1rem;
+      margin-left: 6rem;
+    }
+
+    &__right {
+      display:none;
+    }
+  }
+}
